@@ -15,3 +15,7 @@ target
 
 *.iml
 .DS_Store
+.gradle
+/gameoflife-web/build/
+/gameoflife-core/build/
+/gameoflife-build/build/
