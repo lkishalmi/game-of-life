@@ -12,6 +12,13 @@ subprojects {
     apply plugin: 'checkstyle'
     apply plugin: 'pmd'
     
+
+    test {
+        include '**/When*'
+        include '**/*Test'
+        exclude '**/integration/**'
+    }
+    
     checkstyle {
         configFile = file("$rootDir/config/checkstyle/checkstyle.xml")
         toolVersion = '5.5'
