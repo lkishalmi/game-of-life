@@ -7,6 +7,27 @@ allprojects  {
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'jacoco'
+    apply plugin: 'findbugs'
+    apply plugin: 'checkstyle'
+    apply plugin: 'pmd'
+    
+    checkstyle {
+        configFile = file("$rootDir/config/checkstyle/checkstyle.xml")
+        toolVersion = '5.5'
+        ignoreFailures = true
+    }
+    
+    pmd {
+        ruleSetFiles = files("$rootDir/config/pmd/pmd-rules.xml")
+        toolVersion = '4.2.5'
+        ignoreFailures = true
+    }
+    
+    checkstyleTest.enabled = false
+    findbugsTest.enabled = false
+    pmdTest.enabled = false
+    
     sourceCompatibility = 1.7
     targetCompatibility = 1.7
 
