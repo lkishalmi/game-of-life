@@ -18,4 +18,3 @@ target
 .gradle
 /gameoflife-web/build/
 /gameoflife-core/build/
-/gameoflife-build/build/
