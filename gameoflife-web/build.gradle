@@ -1,5 +1,19 @@
 
 apply plugin: 'war'
+apply plugin: 'jetty'
+
+httpPort = 9090
+stopPort = 9999
+stopKey = 'gameoflife'
+
+jettyRun {
+    contextPath = ''
+}
+
+jettyRunWar {
+    contextPath = ''
+    daemon = true
+}
 
 description = 'gameoflife-web'
 dependencies {
