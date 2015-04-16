@@ -6,13 +6,8 @@ httpPort = 9090
 stopPort = 9999
 stopKey = 'gameoflife'
 
-jettyRun {
-    contextPath = ''
-}
-
-jettyRunWar {
-    contextPath = ''
-    daemon = true
+[jettyRun, jettyRunWar].each { task ->
+    task.contextPath = ''
 }
 
 description = 'gameoflife-web'
