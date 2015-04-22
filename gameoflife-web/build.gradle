@@ -7,8 +7,10 @@ stopPort = 9999
 stopKey = 'gameoflife'
 
 [jettyRun, jettyRunWar].each { task ->
-    task.contextPath = ''
+    task.contextPath = '/gameoflife'
 }
+
+ant.importBuild 'build.xml'
 
 description = 'gameoflife-web'
 dependencies {
